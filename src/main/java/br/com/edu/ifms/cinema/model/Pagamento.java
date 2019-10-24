@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,7 +22,8 @@ public class Pagamento
      * de um para muitos cascadeType.ALL indica que as alterações
      * na entidade pagamento serão refletidas automaticmente
      * nas entidades relacionadas (imprimirTicket)*/
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPagamento")
-    private Collection<ImprimirTicket>idImprimirTicket;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<ImprimirTicket> idImprimirTicket;
 
 }

@@ -14,7 +14,7 @@ import javax.persistence.*;
 /*Anotacoes jpa*/
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)/*No bd cria a tabela pai e as filhas*/
-public class Pessoa
+public abstract class Pessoa
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -17,12 +17,13 @@ public class Sessao
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSessao;
-    private LocalTime horario;
-    private Sala idSala;
-    @ManyToOne
+    private String horario;
+    private String sala;
+
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "idFilme", nullable = false)
     private Filme idFilme;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "idPessoa", nullable = false)
-    private Pessoa idPessoa;
+    private Cliente idCliente;
 }

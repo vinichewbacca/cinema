@@ -5,7 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Collection;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,6 +20,6 @@ public class Assento
     private Long idAssento;
     private int poltrona;
     private String fila;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAssento")
-    private Collection<Pagamento> idPagamento;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Pagamento> idPagamento;
 }

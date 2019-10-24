@@ -21,7 +21,8 @@ public class Filme
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
     private String titulo;
-    private LocalTime duracao;
+    private String duracao;
     private  String genero;
     private int classificacao; /*0 livre e 5 adulto*/
+
 }
