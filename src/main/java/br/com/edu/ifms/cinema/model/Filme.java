@@ -15,6 +15,7 @@ import java.time.LocalTime;
 @Data/*cria todos os getter e setters, hash e tostring*/
 
 @Entity/*sinaliza que é uma tabela do bd*/
+//isso é um teste para ver se vai
 public class Filme
 {
     @Id
